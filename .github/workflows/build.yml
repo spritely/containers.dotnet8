@@ -2,13 +2,9 @@ name: Build and Publish Container
 
 on: [push, workflow_dispatch]
 
-# Required for versioned-container-build to be able to publish container images and
-# to do automatic semantic version tagging
+# Permissions required for automatic semantic version tagging
 permissions:
-    actions: read
-    checks: write
     contents: write
-    packages: write
 
 env:
   BUILD_VERSION_TAG: v0.14.0
@@ -30,6 +26,7 @@ jobs:
         with:
           registryUsername: ${{ secrets.DOCKER_HUB_USERNAME }}
           registryPassword: ${{ secrets.DOCKER_HUB_TOKEN }}
+          registryHost: docker.io
           imageNames: spritely/dotnet8-devcontainer
           context: ./src/src
           dockerfile: ./src/src/Dockerfile
