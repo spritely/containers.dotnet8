@@ -1,6 +1,8 @@
 # containers.dotnet8
 Creates a dotnet 8 devcontainer.
 
+Published container is available from: https://hub.docker.com/repository/docker/spritelydev/dotnet8-devcontainer
+
 ## Developer Information
 
 ### To Manually Copy a Template
