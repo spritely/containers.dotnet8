@@ -1,7 +1,7 @@
 # 1. List of all available tags: https://mcr.microsoft.com/product/dotnet/sdk/tags
 # 2. Details about selecting a container image: https://github.com/dotnet/dotnet-docker/blob/main/README.sdk.md
 # 3. Ubuntu releases: https://www.releases.ubuntu.com/
-# 4. Information on dotnet verions: https://dotnet.microsoft.com/en-us/download/dotnet
+# 4. Information on dotnet versions: https://dotnet.microsoft.com/en-us/download/dotnet
 # Also see:
 # - .NET tagging policy: https://github.com/dotnet/dotnet-docker/blob/main/documentation/supported-tags.md
 # - .NET image variants: https://github.com/dotnet/dotnet-docker/blob/main/documentation/image-variants.md
@@ -12,7 +12,7 @@
 # - Use the linux amd64 variant from #2
 # - Choose latest long-term-support (LTS) version of Ubuntu from #3
 # - Select the latest dotnet version from #4 that exists in #1
-ARG VARIANT=8.0.404-noble-amd64
+ARG VARIANT=8.0.406-noble-amd64
 FROM mcr.microsoft.com/dotnet/sdk:${VARIANT}
 
 # Clear this environment variable so xml docs from NuGet packages are unpackaged. The default dotnet/sdk image sets it to 'skip'.
