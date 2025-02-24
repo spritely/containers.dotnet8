@@ -7,22 +7,15 @@ permissions:
     contents: write
 
 env:
-  BUILD_VERSION_TAG: v0.14.0
+  BUILD_VERSION_TAG: improve-reuse
 
 jobs:
   build:
     runs-on: ubuntu-24.04
 
     steps:
-      - name: Pull build
-        uses: actions/checkout@v4
-        with:
-          repository: spritely/build
-          path: ./build
-          ref: ${{ env.BUILD_VERSION_TAG }}
-
       - name: Build and publish container
-        uses: ./build/steps/versioned-container-build
+        uses: spritely/build/steps/versioned-container-build@${{ env.BUILD_VERSION_TAG }}
         with:
           registryUsername: ${{ secrets.DOCKER_HUB_USERNAME }}
           registryPassword: ${{ secrets.DOCKER_HUB_TOKEN }}
