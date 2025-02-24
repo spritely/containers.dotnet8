@@ -1,5 +1,5 @@
 # containers.dotnet8
-Creates a dotnet 8 devcontainer.
+Creates a devcontainer with dotnet8 preinstalled.
 
 Published container is available from: https://hub.docker.com/repository/docker/spritelydev/dotnet8-devcontainer
 
@@ -32,12 +32,12 @@ chmod +x prepare-for-test.sh
 
 #### To Test
 ```bash
-# prepare-for-test.sh {container-name} {copy-env-file}
+# prepare-for-test.sh {container-name} {true|false - default is false if not supplied}
+# code test/{container-name}
 
-# # if copy-env-file is true then prepare-for-test also runs this line:
+# # if second argument is true then prepare-for-test also runs this line:
 # # cp test/{container-name}/.devcontainer/.env.example test/{container-name}/.devcontainer/.env
 
-# code test/{container-name}
 # Example:
 ./prepare-for-test.sh dotnet8 true
 code test/dotnet8
