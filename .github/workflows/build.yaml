@@ -6,16 +6,13 @@ on: [push, workflow_dispatch]
 permissions:
     contents: write
 
-env:
-  BUILD_VERSION_TAG: improve-reuse
-
 jobs:
   build:
     runs-on: ubuntu-24.04
 
     steps:
       - name: Build and publish container
-        uses: spritely/build/steps/versioned-container-build@${{ env.BUILD_VERSION_TAG }}
+        uses: spritely/build/steps/versioned-container-build@improve-reuse
         with:
           registryUsername: ${{ secrets.DOCKER_HUB_USERNAME }}
           registryPassword: ${{ secrets.DOCKER_HUB_TOKEN }}
