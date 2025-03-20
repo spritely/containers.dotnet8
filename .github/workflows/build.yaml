@@ -14,7 +14,6 @@ jobs:
       - name: Build and publish container
         uses: spritely/build/steps/versioned-container-build@improve-reuse
         with:
-          buildVersion: improve-reuse
           registryUsername: ${{ secrets.DOCKER_HUB_USERNAME }}
           registryPassword: ${{ secrets.DOCKER_HUB_TOKEN }}
           registryHost: docker.io
