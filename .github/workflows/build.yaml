@@ -18,5 +18,5 @@ jobs:
           registryPassword: ${{ secrets.DOCKER_HUB_TOKEN }}
           registryHost: docker.io
           imageNames: spritelydev/dotnet8-devcontainer
-          context: ./src/src
-          dockerfile: ./src/src/Dockerfile
+          context: ./src
+          dockerfile: ./src/Dockerfile
