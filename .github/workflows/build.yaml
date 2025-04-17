@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Build and publish container
-        uses: spritely/build/steps/versioned-container-build@improve-reuse
+        uses: spritely/build/container@improve-reuse
         with:
           registryUsername: ${{ secrets.DOCKER_HUB_USERNAME }}
           registryPassword: ${{ secrets.DOCKER_HUB_TOKEN }}
