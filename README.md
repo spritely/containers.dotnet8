@@ -55,3 +55,4 @@ For example: https://github.com/microsoft/vscode-remote-release/issues/1685
 For additional details on this problem, see: https://code.visualstudio.com/remote/advancedcontainers/add-nonroot-user
 
 Fortunately, there is a simple solution: use a docker-compose file. So that pattern is applied here.
+
