@@ -9,7 +9,7 @@ updates:
       - dependency-name: dotnet/sdk
         update-types: ["version-update:semver-major"]
     groups:
-      all-actions:
+      all-docker:
         patterns:
           - "*"
   # spritely/build/container uses other spritely actions, some of which use the container produced by this repo as a devcontainer
