@@ -1,4 +1,7 @@
 # containers.dotnet8
+
+This repo is now only passively maintained with automation. Upgrade to containers.dotnet10.
+
 Creates a devcontainer with dotnet8 preinstalled.
 
 Published container is available from: https://hub.docker.com/repository/docker/spritelydev/dotnet8-devcontainer
