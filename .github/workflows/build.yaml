@@ -15,7 +15,7 @@ jobs:
       - name: Build and publish container
         # spritely/build/container uses other spritely actions, some of which use the container produced by this repo as a devcontainer
         # Therefore automatic dependency updates would create a circular dependency, so build version updates are manual in this repo
-        uses: spritely/build/container@dfe2449e85e8e0ebbad25f3d3bfea5395b9b13fa # v0.24.113
+        uses: spritely/build/container@13e6443c4d941a20aa80888095c8465312b64402 # v0.24.115
         with:
           registryUsername: ${{ secrets.DOCKER_HUB_USERNAME }}
           registryPassword: ${{ secrets.DOCKER_HUB_TOKEN }}
